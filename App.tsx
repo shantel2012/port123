@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { PORTFOLIO_DATA, PROJECTS, SKILLS, BLOGS } from './constants';
+import { PORTFOLIO_DATA, PROJECTS, SKILLS } from './constants';
 import { ChatWidget } from './components/ChatWidget';
 import tino from './images/tino.jpg';
 
@@ -114,7 +114,6 @@ const App = () => {
             <li><a href="#about" onClick={() => setIsMenuOpen(false)}>About</a></li>
             <li><a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a></li>
             <li><a href="#portfolio" onClick={() => setIsMenuOpen(false)}>Portfolio</a></li>
-            <li><a href="#blog" onClick={() => setIsMenuOpen(false)}>Blog</a></li>
             <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
           </ul>
           <div className="social_icon">
@@ -237,30 +236,6 @@ const App = () => {
                     <span key={tag} style={{ fontSize: '0.7rem', background: 'rgba(255,255,255,0.2)', padding: '2px 8px', borderRadius: '4px', color: 'white' }}>{tag}</span>
                   ))}
                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="blogs" id="blog">
-        <div className="heading">
-          <h1>Our Blog</h1>
-          <p>Insights, tutorials, and thoughts on the ever-evolving world of technology and design.</p>
-        </div>
-        <div className="blog_grid">
-          {BLOGS.map(blog => (
-            <div key={blog.id} className="blog_slide">
-              <div className="blog_img">
-                <img src={blog.img} alt={blog.title} />
-                <div className="blog_hide_content">
-                  <span>{blog.time}</span>
-                  <span>By: {blog.author}</span>
-                </div>
-              </div>
-              <div className="blog_content">
-                <h2>{blog.title}</h2>
-                <p>{blog.desc}</p>
               </div>
             </div>
           ))}
